@@ -33,6 +33,14 @@ public class Exam {
             if (!in_gpa) {
                   degree = degree / CONV_RATE;
             }
+            in_gpa = true;
+      }
+
+      public void convertToPercentage() {
+            if (in_gpa) {
+                  degree = degree * CONV_RATE;
+            }
+            in_gpa = false;
       }
 
       private int getIdFromServer(int student_id, int subject_id) {
